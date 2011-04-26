@@ -18,8 +18,6 @@ namespace blog.Models
         public DateTime data_dodania { get; set; }
         public int status { get; set; }
 
-       // public string keywords { set; get; }
-        //public string description { set; get; }
     }
     [Bind(Exclude = "id, status")]
     public class KomentarzObjectValidate
