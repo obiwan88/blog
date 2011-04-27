@@ -55,6 +55,23 @@ namespace blog.Models
             catch(Exception) {return false;}
             
         }
+        public bool UsunPost(int d_id)
+        {
+
+            try
+            {
+                var doKasacji =
+                   from p in db.Posts
+                   where p.id == d_id
+                   select p;
+                db.Posts.DeleteAllOnSubmit(doKasacji);
+                db.SubmitChanges();
+
+
+                return true;
+            }
+            catch (Exception) { return false; }
+        }
 
     }
 }

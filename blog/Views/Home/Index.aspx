@@ -9,26 +9,33 @@
        <table border="0" style="width: 498px">
           
               <tr bgcolor="#66FFFF">
-                <td>
+                <td bgcolor="#0033CC">
                      Data dodania:  <%:p.data_dodania %><br />
                      Data modyfikacji: <%:p.data_modyfikacji %>
                 </td>     
            </tr>    
            <tr>
-                <td bgcolor="#FFCCCC">
+                <td bgcolor="#0066FF">
                     Tytul:  <%:p.tytul %>
                 </td>
               
            </tr>
             <tr>
-                <td bgcolor="#FFFF99">
+                <td bgcolor="#99CCFF">
                     Tre&#347;&#263;: <%: p.tresc %>
                 </td>                
            </tr>
            <tr>
                 <td>
                    <a href="../Gosc/DodajKoment/?id=<%:p.id%>">dodaj komentarz</a>
+                   |
+                   <a href="../admin/edytuj/?id=<%:p.id%>">edytuj post</a>
+                   |
+                   <a href="../admin/UsunPost/?id=<%:p.id%>">usun post</a>
+                   |
+
                 </td>
+                
            </tr>
        </table><hr /><br />
        

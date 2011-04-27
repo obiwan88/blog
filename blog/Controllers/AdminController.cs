@@ -59,6 +59,17 @@ namespace blog.Controllers
                 return View();    
             }
         }
+       
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult UsunPost(int id)
+        {
+            
+                db_admin.UsunPost(id);
+                return RedirectToAction("Index");
+          
+        }
+     
+
 
 
     }

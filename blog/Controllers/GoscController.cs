@@ -23,6 +23,8 @@ namespace blog.Controllers
         [HttpPost]
         public ActionResult DodajKoment(KlasaPomocniczaDodajKoment obiekt)
         {
+          
+
             if (db_gosc.InsertKomentarz(obiekt) == true)
             {
                 ViewData["action"] = "Komentarz został dodany";

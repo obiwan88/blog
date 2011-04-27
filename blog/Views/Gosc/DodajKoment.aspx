@@ -1,20 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/szablon.Master" Inherits="System.Web.Mvc.ViewPage<blog.Models.KlasaPomocniczaDodajKoment>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+ <%blog.Models.Post post = (blog.Models.Post)ViewData["post"]; %>
     <h2>DodajKoment</h2>
+ <%//Request.QueryString("id"); %>
+ <%//Response.Write(idp); %>
 
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
-
+        
         <fieldset>
             <legend>Fields</legend>
              
           <div class="editor-label">
-                <%: Html.LabelFor(model => model.id_posta) %>
+                <%: Html.Label("id posta") %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.id_posta) %>
+                <%: Html.TextBox("id posta"  )%>
                 <%: Html.ValidationMessageFor(model => model.id_posta) %>
             </div>
             <div class="editor-label">

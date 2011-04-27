@@ -18,3 +18,8 @@ D:\Dropbox\WSPOLNY FOLDER\Asynchronczne Interfejsy WWW\blog\blog\blog\bin\blog.p
 D:\Dropbox\WSPOLNY FOLDER\Asynchronczne Interfejsy WWW\blog\blog\blog\obj\Debug\ResolveAssemblyReference.cache
 D:\Dropbox\WSPOLNY FOLDER\Asynchronczne Interfejsy WWW\blog\blog\blog\obj\Debug\blog.dll
 D:\Dropbox\WSPOLNY FOLDER\Asynchronczne Interfejsy WWW\blog\blog\blog\obj\Debug\blog.pdb
+D:\GIT\bt\blog\bin\blog.dll
+D:\GIT\bt\blog\bin\blog.pdb
+D:\GIT\bt\blog\obj\Debug\ResolveAssemblyReference.cache
+D:\GIT\bt\blog\obj\Debug\blog.dll
+D:\GIT\bt\blog\obj\Debug\blog.pdb

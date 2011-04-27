@@ -103,6 +103,7 @@
     <Content Include="images\top.jpg" />
     <Content Include="Views\Admin\Dodaj.aspx" />
     <Content Include="Views\Admin\edytuj.aspx" />
+    <Content Include="Views\Admin\UsunPost.aspx" />
     <Content Include="Views\Gosc\DodajKoment.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Web.config" />
