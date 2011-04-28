@@ -16,7 +16,7 @@
                 <%: Html.Label("id posta") %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBox("id posta"  )%>
+                <%: Html.TextBoxFor(model => model.id_posta  )%>
                 <%: Html.ValidationMessageFor(model => model.id_posta) %>
             </div>
             <div class="editor-label">

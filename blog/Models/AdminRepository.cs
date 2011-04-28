@@ -57,7 +57,6 @@ namespace blog.Models
         }
         public bool UsunPost(int d_id)
         {
-
             try
             {
                 var doKasacji =
@@ -66,7 +65,6 @@ namespace blog.Models
                    select p;
                 db.Posts.DeleteAllOnSubmit(doKasacji);
                 db.SubmitChanges();
-
 
                 return true;
             }

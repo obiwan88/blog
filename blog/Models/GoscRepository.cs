@@ -24,7 +24,7 @@ namespace blog.Models
              
                 Komentarz k = new Komentarz();
                 k.id = NowyObiekt.id;
-                k.id_posta = post.id;
+                k.id_posta = NowyObiekt.id_posta;
              
                 k.data_dodania = NowyObiekt.data_dodania;
                 k.tresc = NowyObiekt.tresc;
