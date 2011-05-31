@@ -18,7 +18,7 @@ namespace blog.Models
                 p.data_dodania = NowyObiekt.data_dodania;
                 p.tresc = NowyObiekt.tresc;
                 p.tytul = NowyObiekt.tytul;
-                p.status = 0;
+                p.status = 1;
 
                 db.Posts.InsertOnSubmit(p);
                 db.SubmitChanges();

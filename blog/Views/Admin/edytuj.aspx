@@ -20,8 +20,10 @@
                 <%: Html.Label("id") %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBox("id", post.id) %>
-                <%: Html.ValidationMessageFor(model => model.id) %>
+                <%: Html.TextBox("id", post.id,  new { @class = "required email", @readonly="readonly" }) %>
+                <%: Html.ValidationMessageFor(model => model.id)
+                   
+                    %>
             </div>
             
             <div class="editor-label">
@@ -58,14 +60,14 @@
             </div>
             
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Zapisz" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Wroć do strony głównej", "Index") %>
     </div>
 
 </asp:Content>

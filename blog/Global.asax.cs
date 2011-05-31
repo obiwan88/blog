@@ -16,17 +16,28 @@ namespace blog
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            
+
+            routes.MapRoute(
+              "data", // Route name
+              "{controller}/{action}/{year}/{month}/{day}", // URL with parameters
+              new { controller = "Gosc", action = "data" }, // Parameter defaults
+              new { year = @"\d{4}", month = @"\d{2}", day = @"\d{2}" }
+              );
+
+            routes.MapRoute(
+           "tytul", // Route name
+           "Gosc/tytul/{tytul}", // URL with parameters
+           new { controller = "Gosc", action = "tytul", tytul = UrlParameter.Optional } // Parameter defaults
+            );
+
             routes.MapRoute(
                "Default", // Route name
                "{controller}/{action}/{id}", // URL with parameters
                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
            );
+         
 
-            routes.MapRoute(
-              "tytyl_id", // Route name
-              "{controller}/{action}/{tytul_id}", // URL with parameters
-              new { controller = "Gosc", action = "wybierz", tytul_id = UrlParameter.Optional } // Parameter defaults
-          );
 
 
            

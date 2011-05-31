@@ -6,15 +6,12 @@
 
      <% Html.EnableClientValidation(); %>
     <% using (Html.BeginForm()) {%>
-        <%: Html.ValidationSummary(true) %>
-       
+        <%: Html.ValidationSummary(true) %>      
         
 
         <fieldset>
             <legend>Fields</legend>
-            
-            
-            
+                      
             <div class="editor-label">
                 <%: Html.LabelFor(model => model.data_dodania) %>
             </div>
@@ -74,15 +71,13 @@
 
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="DODAJ POSTA" />
             </p>
         </fieldset>
 
     <% } %>
 
-    <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
-    </div>
+
 
 </asp:Content>
 

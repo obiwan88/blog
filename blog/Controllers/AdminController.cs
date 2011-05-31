@@ -17,12 +17,14 @@ namespace blog.Controllers
 
         public ActionResult Dodaj() 
         {
+            
             return View();
         }
 
         [HttpPost]
         public ActionResult Dodaj(KlasaPomocnicza obiekt) 
         {
+
             if (db_admin.InsertPost(obiekt) == true)
             {
                 ViewData["action"] = "Post został dodany";
@@ -32,7 +34,6 @@ namespace blog.Controllers
 
                 ViewData["action"] = "Post nie został dodany";
             }
-
             return View(obiekt);
         }
 

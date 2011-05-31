@@ -10,6 +10,8 @@ namespace blog.Controllers
     public class GoscController : Controller
     {
         GoscRepository db_gosc = new GoscRepository();
+        HomeRepository hr = new HomeRepository();
+
         public ActionResult Index()
         {
             return View();
@@ -17,14 +19,14 @@ namespace blog.Controllers
 
         public ActionResult DodajKoment()
         {
-            return View();
+            KlasaPomocniczaDodajKoment obiekt = new KlasaPomocniczaDodajKoment();
+
+            return View(obiekt);
         }
 
         [HttpPost]
         public ActionResult DodajKoment(KlasaPomocniczaDodajKoment obiekt)
         {
-          
-
             if (db_gosc.InsertKomentarz(obiekt) == true)
             {
                 ViewData["action"] = "Komentarz został dodany";
@@ -41,30 +43,34 @@ namespace blog.Controllers
         public ActionResult showpost(int id)
         {
             ViewData["post"] = db_gosc.get_post(id);
-            ViewData["komentarze"] = db_gosc.get_comments(id);
+             ViewData["klista"] = hr.GetKomentarz();
             return View();
         }
 
-        public ActionResult wybierz(string tytul_id) 
+        public ActionResult showKoment(int id) 
         {
-            if (tytul_id != null)
-            {
-                string id = string.Empty;
-                for (int i = tytul_id.Length-1; i> 0 &&tytul_id[i] != '_'; --i)
-                    id += tytul_id[i];
-
-                int parseid = 0;
-                if (int.TryParse(id, out parseid))
-                {
-                    return showpost(parseid);
-                }
-                else
-                {
-                    ViewData["error"] = "wystapil blad parsowania";
-                    return View();
-                }
-            }
-            return View("Nie podano danych");
+            ViewData["komentarze"] = db_gosc.get_comments(id);
+           
+            return View();
         }
+
+        public ActionResult tytul(string tytul) 
+        {
+            if (tytul != null)
+            {
+                ViewData["tytul"] = db_gosc.getPostByTitle(tytul);
+                ViewData["klista"] = db_gosc.get_comments(tytul); 
+                
+            }
+            return View();
+        }
+        public ActionResult data(int year, int month, int day) 
+        {
+            DateTime dt = new DateTime(year, month, day);
+               ViewData["PostsDate"] = db_gosc.GetPostByDate(dt);
+              
+               return View();
+        }
+
     }
 }

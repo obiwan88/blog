@@ -31,11 +31,11 @@ namespace blog.Models
         [Required (ErrorMessage = "Pole jest wymagane")]
         public string tytul { get; set; }
 
-    //    [RegularExpression(@"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", ErrorMessage = "data w formacie dd-mm-yyyy")]
+     //   [RegularExpression(@"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", ErrorMessage = "data w formacie yyyy-mm-dd")]
         [Required(ErrorMessage = "Pole jest wymagane")]
         public DateTime data_dodania { get; set; }
 
-      //  [RegularExpression(@"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", ErrorMessage = "data w formacie dd-mm-yyyy")]
+      //  [RegularExpression(@"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", ErrorMessage = "data w formacie yyyy-mm-dd")]
         [Required(ErrorMessage = "Pole jest wymagane")]
         public DateTime data_modyfikacji { get; set; }
         
